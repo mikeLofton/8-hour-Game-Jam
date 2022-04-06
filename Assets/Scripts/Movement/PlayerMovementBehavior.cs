@@ -41,7 +41,7 @@ public class PlayerMovementBehavior : MonoBehaviour
         }
 
         if (transform.position.y < -20)
-            transform.position = new Vector3(0, 2, 0);
+            transform.position = new Vector3(0, 2, -14);
     }
 
     private void OnCollisionStay(Collision collision)
