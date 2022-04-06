@@ -38,6 +38,9 @@ public class PlayerMovementBehavior : MonoBehaviour
                 _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
                 isGrounded = false;
             }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+                Application.Quit();
         }
 
         if (transform.position.y < -20)
