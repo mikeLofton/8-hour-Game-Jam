@@ -14,6 +14,7 @@ public class PlayerInputBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _playerMovement.MoveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+        if (!Input.GetKey(KeyCode.P))
+            _playerMovement.MoveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
     }
 }

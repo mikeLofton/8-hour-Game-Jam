@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementBehavior : MonoBehaviour
+public class BuddyMovementBehavior : MonoBehaviour
 {
     [SerializeField]
     private float _speed;
@@ -31,7 +31,7 @@ public class PlayerMovementBehavior : MonoBehaviour
 
     private void Update()
     {
-        if (!Input.GetKey(KeyCode.P))
+        if (Input.GetKey(KeyCode.P))
         {
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
