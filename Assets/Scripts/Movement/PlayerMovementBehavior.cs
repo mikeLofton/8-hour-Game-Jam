@@ -6,8 +6,11 @@ public class PlayerMovementBehavior : MonoBehaviour
 {
     [SerializeField]
     private float _speed;
+    [SerializeField]
+    private float _jumpForce;
     private Rigidbody _rigidbody;
     private Vector3 _moveDirection;
+    private bool isGrounded;
 
     public Vector3 MoveDirection
     {
@@ -24,5 +27,19 @@ public class PlayerMovementBehavior : MonoBehaviour
     {
         Vector3 velocity = MoveDirection * _speed * Time.fixedDeltaTime;
         _rigidbody.MovePosition(transform.position + velocity);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+            isGrounded = false;
+        }      
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        isGrounded = true;
     }
 }
