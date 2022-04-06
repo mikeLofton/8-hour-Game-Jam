@@ -42,4 +42,9 @@ public class PlayerMovementBehavior : MonoBehaviour
     {
         isGrounded = true;
     }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        isGrounded = false;
+    }
 }
