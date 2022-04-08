@@ -8,3 +8,6 @@ Esc - Close game
 
 # Goal
 Make your 2 characters reach the goal
+
+# Known Bugs
+You can sometimes solve the puzzle in an unitended way
