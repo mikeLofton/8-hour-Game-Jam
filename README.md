@@ -1,5 +1,5 @@
 8 hour Game Jam  
-#Controls   
+# Controls   
 WASD - move  
 P - Control other dude  
 Space - Jump  
