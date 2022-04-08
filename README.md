@@ -1,4 +1,4 @@
-8 hour Game Jam 
+8 hour Game Jam   
 A puzzle platformer in which you control 2 dudes
 # Controls   
 WASD - move  
